@@ -1,0 +1,46 @@
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(40px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.animate-fadeInUp {
+	animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+@keyframes chatEntrance {
+	from {
+		opacity: 0;
+		transform: translateY(12px) scale(0.98);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+.animate-chatEntrance {
+	animation: chatEntrance 0.45s cubic-bezier(0.2, 0.9, 0.3, 1) both;
+}
+
+@keyframes chatPopup {
+	from {
+		opacity: 0;
+		transform: translateY(10px) scale(0.98);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+.animate-chatPopup {
+	animation: chatPopup 0.18s cubic-bezier(0.2, 0.9, 0.3, 1) both;
+}
+/* App global styles are handled by Tailwind CSS and index.css */
+
