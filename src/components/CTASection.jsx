@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import makkahImg from '../assets/images/makkah-1.png';
 
 export default function CTASection({ 
   title = "What Are You Waiting For?",
-  backgroundImage = import.meta.env.BASE_URL + "images/Makkah-1.png",
+  backgroundImage = makkahImg,
   heightClass = "h-[60vh] md:h-screen",
 }) {
   return (

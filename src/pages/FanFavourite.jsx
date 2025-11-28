@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import medellinImg from '../assets/images/medellin.jpg';
 
 const colombiaInfo = {
   title: 'COLOMBIA',
@@ -29,8 +30,9 @@ const colombiaInfo = {
 export default function FanFavourite() {
   const [showInfo, setShowInfo] = useState(false);
 
-  // Helper: Correct Vite image loader
-  const img = (name) => import.meta.env.BASE_URL + "images/" + name;
+  // Helper: prefer imported asset when available, otherwise fallback to public images
+  const assets = { 'medellin.jpg': medellinImg };
+  const img = (name) => assets[name] || import.meta.env.BASE_URL + "images/" + name;
 
   return (
     <div className="min-h-screen bg-white">

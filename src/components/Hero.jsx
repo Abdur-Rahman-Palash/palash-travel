@@ -1,5 +1,9 @@
 
 import { ChevronDown, ArrowRight } from 'lucide-react';
+import makkahImg from '../assets/images/makkah-1.png';
+import modinaImg from '../assets/images/modina.png';
+import alakshaImg from '../assets/images/alaksha.png';
+import medellinImg from '../assets/images/medellin.jpg';
 
 export default function Hero({ 
   title = "Explore the World", 
@@ -9,8 +13,14 @@ export default function Hero({
   showScrollIndicator = true 
 }) {
 
-  // Helper for category images
-  const img = (name) => import.meta.env.BASE_URL + "images/" + name;
+  // Helper for category images — prefer bundled imports when available, otherwise fallback to public folder
+  const assets = {
+    'makkah-1.png': makkahImg,
+    'modina.png': modinaImg,
+    'alaksha.png': alakshaImg,
+    'medellin.jpg': medellinImg,
+  };
+  const img = (name) => assets[name] || import.meta.env.BASE_URL + "images/" + name;
 
   return (
     <>

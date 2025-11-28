@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import logoImg from '../assets/images/thinlogoblack.png';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, Search } from 'lucide-react';
 
@@ -29,7 +30,7 @@ export default function Header() {
         {/* Logo - using provided image, removed text label per request */}
         <Link to="/" className="flex items-center gap-2">
           <img
-            src="https://i.ibb.co/hxGxQHmt/thinlogoblack.png"
+            src={logoImg}
             alt="Dar El Salam"
             className="w-36 md:w-44 object-contain"
           />
