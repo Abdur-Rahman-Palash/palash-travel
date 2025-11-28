@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "start:api": "node server/index.js",
+    "install:api": "cd server && npm install",
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
